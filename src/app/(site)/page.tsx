@@ -1,8 +1,15 @@
+'use client'
+
 import Image from 'next/image'
 import styles from './page.module.css'
+import {Button} from '../pages/about/components/Button'
+import { useRef } from 'react'
 
 export default function Home() {
+  const ref = useRef<null | HTMLButtonElement>(null)
+  
   return (
+    <>
     <main className={styles.main}>
       <div className={styles.description}>
         <p>
@@ -91,5 +98,9 @@ export default function Home() {
         </a>
       </div>
     </main>
+    <Button ref={}  size='sm' variant='outline'>
+      Any text
+      </Button>
+    </>
   )
 }
